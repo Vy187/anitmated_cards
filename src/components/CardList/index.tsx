@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import useCards from "../../hooks/useCards";
 import Card     from "../Card";
+import './styles.css';
 
 const CardList = () => {
     const { cards } = useCards();

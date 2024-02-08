@@ -1,3 +1,6 @@
+* {
+    --primary-color: hsl(200, 50%, 50%);
+}
 .card {
     background-color: white;
     padding         : 1rem;
@@ -19,11 +22,31 @@
 }
 
 .button {
-    background  : hsl(200, 50%, 50%);
+    background  : var(--primary-color);
     color: white;
     border      : none;
     font-size: 1rem;
     padding: .5em .75em;
     border-radius: .25em;
     cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background: hsl(200, 50%, 60%);
+}
+
+.button.button-outline {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button.button-outline:hover,
+.button.button-outline:focus {
+    background: hsl(200, 50%, 90%);
+}
+
+.button + .button {
+    margin-left: .25rem;
 }

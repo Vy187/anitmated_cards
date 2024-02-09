@@ -8,6 +8,11 @@
     border-radius   : .25rem;
 }
 
+.card.card-shadow {
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+
 .card-header {
     font-size       : 1.5rem;
     margin-bottom   : .5rem;
@@ -22,13 +27,13 @@
 }
 
 .button {
-    background  : var(--primary-color);
-    color: white;
-    border      : none;
-    font-size: 1rem;
-    padding: .5em .75em;
-    border-radius: .25em;
-    cursor: pointer;
+    background      : var(--primary-color);
+    color           : white;
+    border          : none;
+    font-size       : 1rem;
+    padding         : .5em .75em;
+    border-radius   : .25em;
+    cursor          : pointer;
 }
 
 .button:hover,
@@ -37,9 +42,9 @@
 }
 
 .button.button-outline {
-    background: none;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    background  : none;
+    border      : 1px solid var(--primary-color);
+    color       : var(--primary-color);
 }
 
 .button.button-outline:hover,

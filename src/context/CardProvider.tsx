@@ -8,12 +8,12 @@ export type CardType = {
 
 const initialState: CardType[] = [
     {
-        'upc'       : '1',
+        'upc'       : 'house0001',
         'header'    : '1',
         'body'      : 'hi',
     },
     {
-        'upc'       : '2',
+        'upc'       : 'house0002',
         'header'    : '2',
         'body'      : 'hi',
     }

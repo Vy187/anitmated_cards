@@ -16,7 +16,7 @@ const CardList = () => {
     });
     
     const content = (
-        <main className="main main-cards">
+        <main className="main main-grid">
             {pageContent}
         </main>
     );

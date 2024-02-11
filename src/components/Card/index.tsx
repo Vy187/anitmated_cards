@@ -8,13 +8,18 @@ type PropsType = {
 
 const Card = ({ card }: PropsType): ReactElement => {
     const img: string = new URL(`../../images/${card.upc}.jpg`, import.meta.url).href;
-    console.log(img)
     
     const content = (
         <article className='card card-shadow'>
-            <img className="card-img" src={img} alt="" />
-            <header className='card-header'>{card.header}</header>
-            <p className='card-body'>{card.body}</p>
+            <header className='card-header card-image'>
+                <img src={img} alt={card.upc} />
+            </header>
+            <section className='card-body'>
+                <h1>{card.price}</h1>
+                <p>{card.bed} bds | {card.bathroom} ba | {card.sqft} sqft | {card.status}</p>
+                <p>{card.address}</p>
+                <p>{card.agency}</p>
+            </section>
             <footer className='card-footer'>
                 <button className='button'>Details</button>
                 <button className='button button-outline'>Contact Seller</button>

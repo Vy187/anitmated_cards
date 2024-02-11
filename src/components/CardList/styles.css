@@ -1,16 +1,29 @@
 * {
-    --primary-color: hsl(200, 50%, 50%);
+    --primary-color : hsl(200, 50%, 50%);
+    --padding       : 1rem
 }
+
+body {
+    padding: var(--padding);
+}
+
+.main-grid {
+    display                 : grid;
+    grid-template-columns   : repeat(auto-fit, minmax(300px, 1fr));
+    gap                     : 1rem;
+    align-items             : flex-start;
+}
+
 .card {
     background-color: white;
-    padding         : 1rem;
     border          : 1px solid #777;
     border-radius   : .25rem;
+    overflow        : hidden;
 }
 
 .card.card-shadow {
-    border: none;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+    border      : none;
+    box-shadow  : 0 2px 5px 0 rgba(0, 0, 0, .2);
 }
 
 .card-header {
@@ -18,12 +31,33 @@
     margin-bottom   : .5rem;
 }
 
+.card-header.card-image {
+    overflow: hidden;
+}
+
+.card-header.card-image > img {
+    display         : block;
+    width           : 100%;
+    max-height      : 200px;
+    aspect-ratio    : 16 / 9;
+    object-fit      : cover;
+    object-position : center;
+}
+
 .card-body {
-    font-size: .9rem;
+    font-size   : .9rem;
+    padding     : 0 var(--padding);
+}
+
+.card-body p {
+    text-wrap       : nowrap;
+    text-overflow   : ellipsis;
+    overflow        : hidden;
 }
 
 .card-footer {
-    margin-top: 1rem;
+    margin-top  : 1rem;
+    padding     : 0 var(--padding) var(--padding);
 }
 
 .button {

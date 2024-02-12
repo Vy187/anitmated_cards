@@ -16,8 +16,8 @@ const Card = ({ card }: PropsType): ReactElement => {
             </header>
             <section className='card-body'>
                 <h1>{card.price}</h1>
-                <p>{card.bed} bds | {card.bathroom} ba | {card.sqft} sqft | {card.status}</p>
-                <p>{card.address}</p>
+                <p className='description'>{card.bed} bds | {card.bathroom} ba | {card.sqft} sqft | {card.status}</p>
+                <p className='address'>{card.address}</p>
                 <p>{card.agency}</p>
             </section>
             <footer className='card-footer'>

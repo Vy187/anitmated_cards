@@ -1,10 +1,9 @@
 * {
     --primary-color : hsl(200, 50%, 50%);
-    --padding       : 1rem
 }
 
 body {
-    padding: var(--padding);
+    padding: 1rem;
 }
 
 .main-grid {
@@ -42,22 +41,31 @@ body {
     aspect-ratio    : 16 / 9;
     object-fit      : cover;
     object-position : center;
+    transition      : 200ms transform ease-in-out;
+}
+
+.card:hover {
+    box-shadow  : 0 2px 5px 0 rgba(0, 0, 0);
+}
+
+.card-header.card-image:hover > img{
+    transform: scale(1.025);
 }
 
 .card-body {
     font-size   : .9rem;
-    padding     : 0 var(--padding);
+    padding     : 0 1rem .25rem;
 }
 
-.card-body p {
+.card-body .address,
+.card-body .description {
     text-wrap       : nowrap;
     text-overflow   : ellipsis;
     overflow        : hidden;
 }
 
 .card-footer {
-    margin-top  : 1rem;
-    padding     : 0 var(--padding) var(--padding);
+    padding     : 0 1rem 1rem;
 }
 
 .button {

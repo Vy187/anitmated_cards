@@ -1,6 +1,5 @@
 import { CardType }     from '../../context/CardProvider';
 import { ReactElement } from 'react';
-import './styles.css';
 
 type PropsType = {
     card: CardType
